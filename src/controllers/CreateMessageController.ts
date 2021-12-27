@@ -8,6 +8,8 @@ class CreateMessageController {
 		
 		const createMessageService = new CreateMessageService();
 		
+		const newMessage = await createMessageService.execute({ email, message });
+		
 		return response.json(newMessage);
 	};
 };
