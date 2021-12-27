@@ -10,7 +10,7 @@ const createMessageController = new CreateMessageController;
 const listMesageController = new ListMessageController;
 
 router.get('/', (request: Request, response: Response) => {
-	return response.json({ message: 'Bem vind a API Dio Shopping'});
+	return response.json({ message: 'Bem vindo a API Dio Shopping'});
 });
 
 

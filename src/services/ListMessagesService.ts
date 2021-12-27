@@ -1,13 +1,13 @@
 import { getCustomRepository } from 'typeorm';
-import { MessageRepository } from '../repository/MessageRepository';
+import { MessagesRepository } from '../repository/MessagesRepository';
 
 
 
-class ListMessageService {
+class ListMessagesService {
 	async execute() {
-		const messageRepository = getCustomRepository(MessageRepository);
+		const messagesRepository = getCustomRepository(MessagesRepository);
 		
-		const allMessages = await messageRepository.find();
+		const allMessages = await messagesRepository.find();
 		
 		return allMessages;
 	};
@@ -15,7 +15,7 @@ class ListMessageService {
 
 
 
-export { ListMessageService }
+export { ListMessagesService }
 
 
 
