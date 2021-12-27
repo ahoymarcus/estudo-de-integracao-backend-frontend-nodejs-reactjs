@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
-import { CreateMessageController } from './controllers/CreateMessageController';
-import { ListMessageController } from './controllers/ListMessageController';
+import { CreateMessageController } from '../controllers/CreateMessageController';
+import { ListMessageController } from '../controllers/ListMessageController';
 
 
 
@@ -14,9 +14,9 @@ router.get('/', (request: Request, response: Response) => {
 });
 
 
-
+router.post('/message', createMessageController.handle);
 router.get('/message', listMesageController.hanle);
-router.post('/message', createMessageController.hanle);
+
 
 
 
